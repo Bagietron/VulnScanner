@@ -34,6 +34,7 @@ sudo apt install python3-psycopg2
 - sudo -u postgres psql
 
 -- w psql
+
 CREATE DATABASE vuln_scan;
 
 \c vuln_scan
