@@ -1,5 +1,6 @@
 # VulnScanner
-Mały projekt który skanuje zabezpieczenia komputera.
+Mały projekt który skanuje zabezpieczenia komputera na OS Linux
+.
 
 vuln_scanner.py to plik który:
 - Skanuje zabezpieczenia przy pomocy Lynis,
