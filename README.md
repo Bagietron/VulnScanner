@@ -35,7 +35,9 @@ sudo apt install python3-psycopg2
 
 -- w psql
 CREATE DATABASE vuln_scan;
+
 \c vuln_scan
+
 CREATE TABLE scan_results (
     id SERIAL PRIMARY KEY,
     username TEXT NOT NULL,
