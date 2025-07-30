@@ -28,6 +28,7 @@ sudo apt update
 sudo apt install python3-psycopg2
 
 (Jeżeli miałes błąd było to spowodowane przez zabezpieczenia pythona)
+
 2.  Utwórz baze danych postgresql:
 
 - sudo -u postgres psql
