@@ -20,6 +20,7 @@ python3 -c "import psycopg2; print('psycopg2 is working ✅')"
 Jeżeli nie to wpisz to co poniżej w terminalu i powinno być w porządku:
 
 sudo apt update
+
 sudo apt install python3-psycopg2
 
 (Jeżeli miałes błąd było to spowodowane przez zabezpieczenia pythona)
