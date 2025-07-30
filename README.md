@@ -39,10 +39,12 @@ CREATE DATABASE vuln_scan;
 \c vuln_scan
 
 CREATE TABLE scan_results (
+
     id SERIAL PRIMARY KEY,
     username TEXT NOT NULL,
     scan_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     scan_output TEXT NOT NULL
+    
 );
 
 
