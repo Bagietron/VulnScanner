@@ -9,11 +9,13 @@ vuln_scanner.py to plik który:
 
 1. Aby wszystko działało poprawnie zainstaluj w terminalu potrzebne paczki:
 [
+
 sudo apt update
 
 sudo apt install lynis postgresql postgresql-client python3-pip -y
 
 pip3 install psycopg2-binary
+
 ]
 
 Zobacz czy działa paczka z pythona:
