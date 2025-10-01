@@ -73,11 +73,11 @@ Plik vuln_scanner.py:
 
 	Wyniki można także obejrzeć w narzędziu graficznym pgAdmin 4, które ułatwia zarządzanie bazą danych.
 
-	5. Lokalizacje plików Lynis (przydatne)
+	5. Lokalizacje plików Lynis 
 
-	- /var/log/lynis.log — główny log Lynis (detaliczne informacje o teście)
+	- /var/log/lynis.log — główny log Lynis 
 	- /var/log/lynis-report.dat — raport w formacie danych Lynis
-	- Pliki .txt generowane przez skrypt mogą być zapisywane w katalogu, z którego uruchamiasz skrypt (np. /home/użytkownik/)
+	- Pliki .txt generowane przez skrypt mogą być zapisywane w katalogu, z którego uruchamiasz skrypt 
 
 	Jeżeli chcesz odczytać plik tekstowy z raportem:
 	- Polecenie w terminalu:
@@ -85,36 +85,3 @@ Plik vuln_scanner.py:
 	  lub
 	  cat /ścieżka/do/pliku.txt
 
-	6. Dobre praktyki i uwagi
-
-	- Nie używaj stałych haseł w skryptach publicznych — rozważ użycie zmiennych środowiskowych lub pliku konfiguracyjnego (np. .env) wyłączonego z kontroli wersji.
-	- Dla środowisk produkcyjnych preferuj instalację python3-psycopg2 przez apt zamiast psycopg2-binary przez pip.
-	- Regularnie aktualizuj system i pakiety: sudo apt update && sudo apt upgrade
-	- Przechowuj kopie zapasowe bazy danych, jeśli potrzebujesz historii skanów długoterminowo.
-
-	7. Szybkie przypomnienie komend (podsumowanie)
-
-	Instalacja:
-	sudo apt update
-	sudo apt install lynis postgresql postgresql-client python3-pip -y
-	pip3 install psycopg2-binary
-	-- lub w razie problemów:
-	sudo apt install python3-psycopg2
-
-	Tworzenie bazy i tabeli (w psql):
-	CREATE DATABASE vuln_scan;
-	\c vuln_scan
-	CREATE TABLE scan_results (
-	    id SERIAL PRIMARY KEY,
-	    username TEXT NOT NULL,
-	    scan_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	    scan_output TEXT NOT NULL
-	);
-
-	Uruchomienie skryptu:
-	sudo python3 vuln_scanner.py
-
-	Sprawdzenie wyników:
-	sudo -u postgres psql
-	\c vuln_scan
-	SELECT id, username, scan_time FROM scan_results ORDER BY scan_time DESC;
