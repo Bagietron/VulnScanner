@@ -72,16 +72,3 @@ Plik vuln_scanner.py:
 	5. Alternatywa – GUI
 
 	Wyniki można także obejrzeć w narzędziu graficznym pgAdmin 4, które ułatwia zarządzanie bazą danych.
-
-	5. Lokalizacje plików Lynis 
-
-	- /var/log/lynis.log — główny log Lynis 
-	- /var/log/lynis-report.dat — raport w formacie danych Lynis
-	- Pliki .txt generowane przez skrypt mogą być zapisywane w katalogu, z którego uruchamiasz skrypt 
-
-	Jeżeli chcesz odczytać plik tekstowy z raportem:
-	- Polecenie w terminalu:
-	  less /ścieżka/do/pliku.txt
-	  lub
-	  cat /ścieżka/do/pliku.txt
-
